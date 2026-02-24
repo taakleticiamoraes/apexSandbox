@@ -1,0 +1,13 @@
+public with sharing class lastOccurrence {
+    public static Integer findLast(List<Integer> nums, Integer target) {
+        Integer lastIndex = -1;
+        
+        for (Integer i = 0; i < nums.size(); i++) {
+            if (nums[i] == target) {
+                lastIndex = i;
+            }
+        }
+        
+        return lastIndex;
+    }
+}
