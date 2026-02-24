@@ -1,0 +1,12 @@
+public with sharing class contextUser {
+    public Map<String,String> getContextUserInformation(){
+        Map<String,String> userMap = new Map<String,String>();
+        
+        userMap.put('UserName', UserInfo.getUserName());
+        userMap.put('ProfileId', UserInfo.getProfileId());
+        userMap.put('EmailId', UserInfo.getUserEmail());
+        userMap.put('Type', UserInfo.getUserType());
+        
+        return userMap;
+    }
+}
