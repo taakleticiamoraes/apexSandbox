@@ -1,0 +1,15 @@
+public with sharing class accountRating {
+    public void setAccountRating(Account a) {
+        if (a == null || a.AnnualRevenue == null) {
+            return;
+        }
+        
+        if (a.AnnualRevenue <= 100000) {
+            a.Rating = 'Cold';
+        } else if (a.AnnualRevenue <= 500000) {
+            a.Rating = 'Warm';
+        } else {
+            a.Rating = 'Hot';
+        }
+    }
+}
