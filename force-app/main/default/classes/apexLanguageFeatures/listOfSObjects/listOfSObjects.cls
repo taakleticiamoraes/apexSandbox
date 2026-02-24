@@ -1,0 +1,16 @@
+public with sharing class listOfSObjects {
+    public List<sObject> getListOfsObject(List<Account> accounts, List<Contact> contacts)
+    {
+        List<sObject> result = new List<sObject>();
+        
+        if (accounts != null && !accounts.isEmpty()) {
+            result.addAll(accounts);
+        }
+        
+        if (contacts != null && !contacts.isEmpty()) {
+            result.addAll(contacts);
+        }
+        
+        return result;
+    }
+}
